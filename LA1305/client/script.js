@@ -1,7 +1,13 @@
-let frenchmode = document.createElement(button)
-let germanmode = document.createElement(button)
-let englishmode = document.createElement(Button)
+let frenchmode = document.createElement('btn')
+let germanmode = document.createElement('btn')
+let englishmode = document.createElement('btn')
 
-let body = document.querySelector(body)
+let body = document.querySelector('body')
 
 body.append(germanmode, frenchmode, englishmode)
+
+fetch('http://localhost:3000/vocis/')
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data)
+  })
